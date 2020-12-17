@@ -1,0 +1,172 @@
+body {
+    background-color: #f1faee;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(5, 140px);
+    grid-template-rows: repeat(5, 100px);
+    justify-content: center;
+    gap: 10px;
+}
+
+.notfound {
+    background-color: rgb(30, 30, 30);
+}
+
+.center-screen {
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    }
+
+a {
+    text-decoration: none;
+}
+
+h3 a {
+    color: rgb(190, 150, 190);
+}
+
+h1 {
+    color: #264653;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+h1 a {
+    color: #264653;
+    text-decoration: none;
+}
+
+.link-container {
+    display: flex;
+    justify-content: center;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin-bottom: 2em;
+}
+
+.scoreboard,
+.player-turn {
+    font-weight: 900;
+    font-size: 18px;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+.scoreboard {
+    white-space: nowrap;
+    text-align: center;
+}
+
+.scoreboard * {
+    display: inline;
+    justify-content: right;
+}
+
+.scoreboard>.blue-scoreboard {
+    color: blue;
+}
+
+.scoreboard>.red-scoreboard {
+    color: red;
+}
+
+.player-turn {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.wordCard {
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    border: 2em;
+    font-weight: 900;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, sans-serif;
+    transition-duration: 90ms;
+}
+
+.spymasterRed {
+    background-color: rgb(245, 90, 66);
+    color: white;
+}
+
+.spymasterBlue {
+    background-color: rgb(66, 138, 245);
+    color: white;
+}
+
+.spymasterCivilian {
+    background-color: rgb(215, 195, 150);
+    color: rgb(80, 80, 80);
+}
+
+.spymasterAssassin {
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
+
+.playerView {
+    background-color: teal;
+    color: white;
+}
+
+.playerView:hover {
+    background-color: #8bbb8b !important;
+    border-radius: 25px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h3 a:hover {
+    color: white;
+}
+
+#btn-player,
+#btn-spymaster,
+#btn-next-game,
+#btn-skip-turn {
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    padding: 10px 35px;
+    transition-duration: 95ms;
+    background-color: #bc412b;
+    text-transform: uppercase;
+    color: antiquewhite;
+    font-size: 16px;
+    font-weight: 600;
+    border-color: #bc412b;
+    border-radius: 4px;
+    box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
+    transition-duration: 90ms;
+}
+
+#btn-player:hover,
+#btn-spymaster:hover,
+#btn-next-game:hover,
+#btn-skip-turn:hover {
+    position: static;
+    margin: 1em;
+    padding: 9px 34px;
+    border-radius: 4px;
+    border: 3px solid;
+    border-color: black;
+    background-color: rgb(14, 106, 243);
+    box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
+    transition-duration: 90ms;
+}

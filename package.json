@@ -1,0 +1,25 @@
+{
+  "name": "cmpt315_project_group4",
+  "version": "1.0.0",
+  "description": "A web version of Codenames",
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericwedemire/CMPT315_Project_Group4.git"
+  },
+  "author": "Eric Wedemire, Von Castro, Shea Odland",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ericwedemire/CMPT315_Project_Group4/issues"
+  },
+  "homepage": "https://github.com/ericwedemire/CMPT315_Project_Group4#readme",
+  "devDependencies": {
+    "@types/dot": "^1.1.4",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^14.14.8",
+    "typescript": "^4.0.5"
+  }
+}

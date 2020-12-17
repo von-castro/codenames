@@ -1,0 +1,112 @@
+html,
+body {
+  height: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 15em auto 15em;
+  grid-template-rows: min-content auto;
+}
+img {
+  height: 25%;
+  width: 100%;
+}
+
+header,
+footer,
+main {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0%;
+  width: 100%;
+  height: 1rem;
+  background-color: beige;
+  font-size: 12px;
+}
+section,
+article {
+  opacity: 90%;
+  color: black;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #ffc500;
+}
+
+main {
+  background-image: url("main.jpg");
+}
+
+h1 {
+  top: 30%;
+}
+
+p,
+li {
+  font-weight: 550;
+  font-size: 14px;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.instructions,
+.game-form,
+h1 {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sub-container {
+  background-color: red;
+}
+
+.instructions {
+  top: 45%;
+}
+.game-form {
+  top: 50%;
+}
+
+input[type="text"] {
+  color: green;
+  width: 50%;
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: 600;
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+}
+
+input[type="text"]:focus {
+  background: #dfe0e2;
+}
+input[type="submit"] {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: white;
+  background-color: #364237;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  width: 12%;
+}
+input[type="submit"]:hover {
+  color: white;
+  background-color: #4caf50;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../game.css">
+    <title>Codenames | {{.ID}} </title>
+    <script type="text/x-dot-template" id="link-container-template"></script>
+    <script type="text/x-dot-template" id="board-template"></script>
+
+</head>
+
+<body id="{{.ID}}">
+    <h1 id="home-header">
+        <a href="/">codenames</a>
+    </h1>
+
+    <div class="link-container">
+        Share this link with your friends: <a href="" class="link">{{.ID}}</a>
+    </div>
+
+    <div class="scoreboard">
+        <p class="blue-scoreboard">9</p>
+        -
+        <p class="red-scoreboard">8</p>
+    </div>
+    <div class="player-turn"></div>
+
+    <div>
+    <div class="board">
+        <div class="wordCard"></div>
+        <div class="wordCard"></div>
+        <div class="wordCard"></div>
+        <div class="wordCard"></div>
+        <div class="wordCard"></div>
+
+        <div class="wordCard"></div>
+        <div class="wordCard"></div>
+        <div class="wordCard"></div>
+        <div class="wordCard"></div>
+        <div class="wordCard"></div>
+
+        <div class="wordCard"></div>
+        <div class="wordCard"></div>
+        <div class="wordCard"></div>
+        <div class="wordCard"></div>
+        <div class="wordCard"></div>
+
+        <div class="wordCard"></div>
+        <div class="wordCard"></div>
+        <div class="wordCard"></div>
+        <div class="wordCard"></div>
+        <div class="wordCard"></div>
+
+        <div class="wordCard"></div>
+        <div class="wordCard"></div>
+        <div class="wordCard"></div>
+        <div class="wordCard"></div>
+        <div class="wordCard"></div>
+    </div>
+
+    <div class="btn-container">
+        <input type="submit" id="btn-player" value="player">
+        <input type="submit" id="btn-spymaster" value="spymaster">
+        <input type="submit" id="btn-skip-turn" value = "skip turn">
+        <input type="submit" id="btn-next-game" value="Next game">
+    </div>
+    </div>
+    <script src="../main.js"></script>
+    <script src="../doT.js"></script>
+</body>
+</html>

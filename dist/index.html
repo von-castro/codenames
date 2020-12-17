@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Codenames</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <img src="header.jpg" />
+        <div class="sub-container">
+          <h1 id="game-title">CODENAMES</h1>
+          <div class="instructions">
+            Enter a game identifier then click go to create a new game or join
+            an existing game.
+          </div>
+          <div class="game-form">
+            <form id="form">
+              <input type="text" id="game-id" name="game-id" placeholder="Enter GAME-ID" required pattern="[a-zA-Z0-9]+" />
+              <input type="submit" id="btn-go" value="Go" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <!-- Game rules taken from pdf provided by Nicholas Boers -->
+      <section>
+        <h2>Game Rules</h2>
+        <p>Read below to find out how the game is played!</p>
+      </section>
+
+      <article>
+        <h3>SET UP</h3>
+        <p>
+          Players split up into two teams of similar size and skill. You need at
+          least four players (two teams of two) for a standard game. Variants
+          for two or three players can be found on the back page. Each team
+          chooses one player to be their spymaster. Both spymasters sit on the
+          same side of the table. The other players sit across from their
+          spymasters. They are field operatives. Randomly choose 25 codenames
+          and place them on the table in a 5-by-5 grid. Note: While shuffling
+          the codename cards, be sure to flip over half the deck once in a
+          while. This will mix the words more thoroughly.
+        </p>
+
+        <h4>THE KEY</h4>
+        <p>
+          Each game has one key that reveals the secret identities of the cards
+          on the table. The spymasters should choose the key card randomly and
+          slide it into the stand between them. Any side can be up. Don't think
+          about it. Just slide it into the stand. And don't let the field
+          operatives see it.
+        </p>
+
+        <h4>STARTING TEAM</h4>
+        <p>
+          The four lights around the edge of the key card indicate which team
+          starts. The starting team has 9 words to guess. The other team has 8.
+          The starting team will give the first clue of the game
+        </p>
+
+        <h4>AGENT CARDS</h4>
+        <p>
+          The red agent cards go in a stack in front of the red spymaster. The
+          blue agent cards should be in front of the blue spymaster. This helps
+          everyone remember which team they are on.
+        </p>
+        <p>
+          The double agent belongs to whichever team starts. Flip it to that
+          team's color. It will be one of that team's agent cards for the
+          duration of the game.
+        </p>
+        <p>
+          The innocent bystander cards and the assassin should be kept in
+          between, where both spymasters can reach them easily.
+        </p>
+      </article>
+
+      <article>
+        <h3>GAME OVERVIEW</h3>
+        <p>
+          Spymasters know the secret identities of 25 agents. Their teammates
+          know the agents only by their codenames. Spymasters take turns giving
+          one-word clues. A clue may relate to multiple words on the table. The
+          field operatives try to guess which words their spymaster meant. When
+          a field operative touches a word, the spymaster reveals its secret
+          identity. If the field operatives guess correctly, they may continue
+          guessing, until they run out of ideas for the given clue or until they
+          hit a wrong person. Then it is the other team's turn to give a clue
+          and guess. The first team to contact all their agents wins the game.
+        </p>
+      </article>
+
+      <article>
+        <h3>GAME PLAY</h3>
+        <p>
+          Teams take turns. The starting team is indicated by the 4 lights on
+          the edges of the key card.
+        </p>
+
+        <h4>GIVING A CLUE</h4>
+        <p>
+          If you are the spymaster, you are trying to think of a one-word clue
+          that relates to some of the words your team is trying to guess. When
+          you think you have a good clue, you say it. You also say one number,
+          which tells your teammates how many codenames are related to your
+          clue.
+        </p>
+        <p>
+          Example: Two of your words are NUT and BARK. Both of these grow on
+          trees, so you say tree: 2.
+        </p>
+        <p>
+          You are allowed to give a clue for only one word (cashew: 1 ) but it's
+          fun to try for two or more. Getting four words with one clue is a big
+          accomplishment.
+        </p>
+
+        <h4>One Word</h4>
+        <p>
+          Your clue must be only one word. You are not allowed to give extra
+          hints. For example, don't say, "This may be a bit of a stretch…" You
+          are playing Codenames. It's always a bit of a stretch.
+        </p>
+        <p>
+          Your clue cannot be any of the codenames visible on the table. On
+          later turns, some codenames will be covered up, so a clue that is not
+          legal now might be legal later.
+        </p>
+
+        <h4>MAKING CONTACT</h4>
+        <p>
+          When the spymaster gives a clue, his or her field operatives try to
+          figure out what it means. They can debate it amongst themselves, but
+          the spymaster must keep a straight face. The operatives indicate their
+          official guess when one of them touches one of the codenames on the
+          table.
+        </p>
+        <ul>
+          <li>
+            If the field operative touches a card belonging to his or her team,
+            the spymaster covers the word with an agent card in that color. The
+            operatives get another guess (but not another clue).
+          </li>
+          <li>
+            If the field operative touches an innocent bystander, the spymaster
+            covers it with an innocent bystander card. This ends the turn.
+          </li>
+          <li>
+            If the field operative touches a card belonging to the other team,
+            the word is covered by one of the other team's agent cards. This
+            ends the turn. (And it helps the other team.)
+          </li>
+          <li>
+            If the field operative touches the assassin, the word is covered by
+            the assassin card. This ends the game! The team that contacted the
+            assassin loses.
+          </li>
+        </ul>
+
+        <p>
+          <b>Tip</b>: Before saying your clue out loud, make sure it doesn't
+          relate to the assassin.
+        </p>
+
+        <h4>Number of Guesses</h4>
+        <p>
+          The field operatives must always make at least one guess. Any wrong
+          guess ends the turn immediately, but if the field operatives guess a
+          word of their team's color, they can keep guessing.
+        </p>
+        <p>
+          You can stop guessing at any time, but usually you want to guess as
+          many words as the spymaster said. Sometimes you might even want to
+          guess one more:
+        </p>
+        <p>
+          Example: Red Team's first clue was tree: 2. The red operative wanted
+          to guess ORANGE and NUT. She guessed ORANGE first. That was an
+          innocent bystander, so she did not get a chance to guess NUT.
+        </p>
+        <p>
+          Blue Team took a turn and correctly guessed two words. Now it is Red
+          Team's turn again.
+        </p>
+        <p>
+          The red spymaster says river: 3. The red operative is pretty sure the
+          AMAZON is a river, so she touches that card. The spymaster covers it
+          with a red agent card, so she gets to go again. A river has a BED, so
+          she touches that codename. It's also red, so she can go again.
+        </p>
+        <p>
+          She's not sure of the third river word. She picks NUT. This has
+          nothing to do with river. She is guessing a word from the previous
+          clue.
+        </p>
+        <p>
+          NUT is a red word. The operative has made 3 correct guesses for the
+          clue river: 3. She is allowed one final guess. She can try to find the
+          third river word, or she can try to find the other tree word. Or she
+          can stop at three and let Blue Team have a turn.
+        </p>
+        <p>
+          You are allowed only one extra guess. In the example above, the red
+          operative would be allowed 4 guesses because her spymaster said the
+          number 3. When the field operatives say they are done guessing (or
+          when they guess wrong) it is the other team's turn.
+        </p>
+
+        <h4>GAME FLOW</h4>
+        <p>
+          Spymasters take turns giving clues. After a spymaster gives a clue,
+          his or her team starts guessing. Their turn ends when they guess
+          wrong, when they decide to stop, or when they have made the maximum
+          number of guesses for that clue. Then it is the other team's turn.
+        </p>
+
+        <h4>ENDING THE GAME</h4>
+        <p>
+          The game ends when one team has all their words covered. That team
+          wins.
+        </p>
+        <p>
+          It is possible to win on the other team's turn if they guess your last
+          word.
+        </p>
+        <p>
+          The game can end early if a field operative makes contact with the
+          assassin. That operative's team loses.
+        </p>
+
+        <h4>Set up for the Next Game</h4>
+        <p>
+          Do other people want a chance to be spymasters? Setup for the second
+          game is easy. Remove the cards covering the codenames and put them
+          back in their stacks. Now just flip over the 25 codenames, and you're
+          ready to go!
+        </p>
+      </article>
+      <article>
+        <h3>PENALTY FOR INVALID CLUES</h3>
+        <p>
+          If a spymaster gives an invalid clue, the team's turn ends
+          immediately. As an additional penalty, the other team's spymaster may
+          cover one of his or her words with an agent card before giving the
+          next clue.
+        </p>
+        <p>But if no one notices that a clue is invalid, it counts as valid.</p>
+      </article>
+      <article>
+        <h3>KEEPING A STRAIGHT FACE</h3>
+        <p>
+          The spymaster is expected to keep a straight face. Do not reach for
+          any card while your teammates are considering the words. When a
+          teammate touches a word, consult the key card and cover the word with
+          the card of the corresponding color. When a teammate chooses a word of
+          the correct color, you should act as though it was exactly the word
+          you meant, even if it wasn't.
+        </p>
+        <p>
+          If you are a field operative, you should focus on the table when you
+          are making your guesses. Do not make eye contact with the spymaster
+          while you are guessing. This will help you avoid nonverbal cues.
+        </p>
+        <p>
+          When your information is strictly limited to what can be conveyed with
+          one word and one number, you are playing in the spirit of the game.
+        </p>
+      </article>
+      <article>
+        <h3>VALID CLUES</h3>
+        <p>
+          We playtested various rules. Some groups like the rules one way. Some
+          like the rules another way. You should experiment to find out what
+          your group likes.
+        </p>
+      </article>
+      <article>
+        <h3>FIRM RULES</h3>
+        <p>
+          Some clues are invalid because they violate the spirit of the game.
+        </p>
+        <p>
+          Your clue must be about the meaning of the words. You can't use your
+          clue to talk about the letters in a word or its position on the table.
+          Gland is not a valid clue for ENGLAND. You can't tie BUG, BED, and BOW
+          together with a clue like b: 3 nor with a clue like three: 3. However
+          …
+        </p>
+        <p>
+          Letters and numbers are valid clues, as long as they refer to
+          meanings. You can use X: 1 as a clue for RAY. You can use eight: 3 as
+          a clue for BALL, FIGURE, and OCTOPUS.
+        </p>
+        <p>
+          The number you say after your clue can't be used as a clue. Citrus: 8
+          is not a valid clue for LEMON and OCTOPUS.
+        </p>
+        <p>
+          You must play in English. A foreign word is allowed only if the
+          players in your group would use it in an English sentence. For
+          example, you can't use Apfel as a clue for APPLE and BERLIN, but you
+          can use strudel.
+        </p>
+        <p>
+          You can't say any form of a visible word on the table. Until BREAK is
+          covered up by a card, you can't say break, broken, breakage, or
+          breakdown.
+        </p>
+        <p>
+          You can't say part of a compound word on the table. Until HORSESHOE is
+          covered up, you can't say horse, shoe, unhorsed, or snowshoe.
+        </p>
+      </article>
+      <article>
+        <h3>HOMONYMS & SPELLING</h3>
+        <p>
+          English has many homonyms and homophones. E. g. night sounds like
+          knight, but these two words don't mean the same thing.
+        </p>
+        <p>
+          Same-sounding words with different meanings and different spellings
+          are considered different words. So you can't give knight-related clues
+          for NIGHT.
+        </p>
+        <p>
+          Words that are spelled the same are considered the same even though
+          they might have different pronunciations and meanings. For example,
+          actors take a bow and the bow is part of a ship, so you could use bow
+          as a clue for THEATER and SHIP. You could also use it as a clue for
+          archery-related things, even though that bow is pronounced
+          differently.
+        </p>
+        <p>
+          You are allowed to spell out your clue. For example, if you want your
+          teammates to guess THEATER and STRING, you can spell out b-o-w without
+          committing to a pronunciation. You can give the clue k-n-i-g-h-t even
+          when NIGHT is one of the codenames on the table. (But you can't use
+          t-h-e-a-t-r-e when THEATER is on the table. Theatre and theater are
+          different forms of the same word.)
+        </p>
+        <p>
+          You should spell out your clue if someone asks. If you aren't that
+          strong on spelling, ask the opposing spymaster for help.
+        </p>
+        <p>
+          <b>Tip</b>: Spelling is not just for homonyms. It's also useful when
+          the room is noisy or when the players have very different accents.
+        </p>
+      </article>
+      <article>
+        <h3>DON'T BE TOO STRICT</h3>
+        <p>
+          England and island were originally compound words, but in this
+          century, island is a valid clue for ENGLAND. Even land is a valid clue
+          for ENGLAND. And anybody who says you can't say sparrow when ROW is on
+          the table is just trying to cause trouble.
+        </p>
+        <p>
+          If the opposing spymaster allows it, the clue is valid. If you aren't
+          sure, ask your opponent. (Quietly, so the others can't hear.)
+        </p>
+      </article>
+      <article>
+        <h3>FLEXIBLE RULES</h3>
+        <p>
+          Sometimes you have to make judgment calls about what is valid and what
+          is not. Different groups may prefer to play the game differently.
+        </p>
+
+        <h4>Compound Words</h4>
+        <p>
+          English has three ways to write a compound word. Greenhouse is one
+          word. Pack rat is two words. Mother-in-law is hyphenated. Technically,
+          only greenhouse can be a one-word clue.
+        </p>
+        <p>
+          You can decide to allow any compound words. However, in no case should
+          a player be allowed to invent compound words. Lunar squid is not a
+          valid clue for MOON and OCTOPUS.
+        </p>
+
+        <h4>Proper Names</h4>
+        <p>
+          Proper names are always valid clues if they follow the other rules.
+          George is a valid clue, but you might want to specify whether you mean
+          George Washington or George W. Bush. Your group can agree to count
+          proper names as one word. This would also allow titles such as The
+          Three Musketeers. Even if you don't allow multiword proper names, you
+          might want to make an exception for place names like New York.
+        </p>
+        <p>
+          Spymasters should not be allowed to make up names, not even names that
+          turn out to be real. Sue Mee is not a valid clue for CHINA and LAWYER.
+        </p>
+
+        <h4>Acronmys and Abbreviations</h4>
+        <p>
+          Technically, CIA is not one word. But it is a great clue. You can
+          decide to allow common abbreviations like UK, lol, and PhD. And words
+          like laser, radar, and sonar are always allowed, even though they
+          originated as acronyms.
+        </p>
+
+        <h4>Homonyms</h4>
+        <p>
+          Some people prefer to allow a more liberal use of homonyms. You can
+          allow knight to be a clue for night-related things if that makes the
+          game more fun for you.
+        </p>
+
+        <h4>Rhymes</h4>
+        <p>
+          Rhymes are always valid when they refer to meanings. Snail is a valid
+          clue for MAIL because this rhyme is a common phrase. Snail is also a
+          valid clue for WHALE because they are both animals. Snail is not a
+          valid clue for SCALE because their main association is through the
+          sound of the words. (If someone in your group has a job weighing
+          snails, however, this clue is perfectly fine.)
+        </p>
+        <p>
+          Some people like to allow any kind of rhyming clue. If you decide to
+          allow this, just remember that you aren't allowed to indicate you are
+          giving a rhyming clue. Your operatives will have to figure that out
+          for themselves.
+        </p>
+      </article>
+      <article>
+        <h3>EXPERT CLUE: ZERO</h3>
+        <p>
+          You are allowed to use 0 as the number part of your clue. For example,
+          feathers: 0 means, "None of our words relate to feathers."
+        </p>
+        <p>
+          If 0 is the number, the usual limit on guesses does not apply. Field
+          operatives can guess as many words as they want. They still must guess
+          at least one word.
+        </p>
+        <p>
+          If you're not sure why this is useful, don't worry. You'll figure it
+          out.
+        </p>
+      </article>
+      <article>
+        <h3>EXERPT CLUE: UNLIMITED</h3>
+        <p>
+          Sometimes you may have multiple unguessed words related to clues from
+          the previous rounds. If you want your team to guess more than one of
+          them, you may say unlimited instead of a number. For example feathers:
+          unlimited.
+        </p>
+        <p>
+          The disadvantage is that the field operatives do not know how many
+          words are related to the new clue. The advantage is that they may
+          guess as many words as they want.
+        </p>
+      </article>
+      <article>
+        <h3>WITH FEWER PLAYERS</h3>
+
+        <h4>Two-Player Game</h4>
+        <p>
+          If there are only two of you, you can play on the same team. This
+          two-player variant also works for larger groups of people who don't
+          feel like competing against each other. You will try to get a high
+          score against a simulated opponent.
+        </p>
+        <p>
+          Set up the game as usual. One player will be the spymaster and the
+          rest will be field operatives. The other team has no players, but you
+          still need their stack of agent cards.
+        </p>
+        <p>
+          Your team should go first, so be sure to pick a key card that makes
+          you the starting team.
+        </p>
+        <p>
+          Play your turns as usual. Try to avoid enemy agents and the assassin.
+        </p>
+        <p>
+          The spymaster simulates the enemy team by covering up 1 of their words
+          each time they get a turn. The spymaster gets to choose which word is
+          covered, so there is a bit of strategy here.
+        </p>
+        <p>
+          If your team contacts the assassin, or if all the enemy agents are
+          contacted, you lose. There is no score.
+        </p>
+        <p>
+          If your team wins, give yourselves a score based on how many agent
+          cards are still left in the enemy's stack.
+        </p>
+        <p>
+          Note: Your score will be determined by how many turns you needed and
+          also by how many enemy agents you contacted accidentally.
+        </p>
+
+        <h4>Three-Player Game</h4>
+        <p>
+          Three players who want to be on the same team can play as described
+          above. If two players want to compete against each other, they can be
+          spymasters and the third player can be their operative.
+        </p>
+        <p>
+          Setup and game play are as usual, except that the single field
+          operative is working for both sides. (Just like spies in real life!)
+          The winning spymaster is determined in the usual way. The field
+          operative tries to do a good job for both sides.
+        </p>
+        <p>
+          For more about the game and its variants, please visit
+          <a href="https://www.codenamesgame.com">www.codenamesgame.com</a>.
+        </p>
+      </article>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
