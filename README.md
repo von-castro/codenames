@@ -1,98 +1,41 @@
-# CMPT315_Project_Group4
-##### Shea Odland, Von Castro, Eric Wedemire
-##### CMPT315 - Web Application Development
-##### Group Project: Codenames
+#Codenames
 
+## Contributors
 
-## Configuration
-```
-    HOST = localhost
-    PORT = 6379
-```
-## Database
+<a href="https://github.com/ericwedemire/CMPT315_Project_Group4/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ericwedemire/CMPT315_Project_Group4" />
+</a>
 
-We used a Docker based redis database for our implementation. Initially it was spun up on WSL with the command:
-```
-    sudo docker run --name projectDB -p 6379:6379 -d redis
-```
+Made with [contributors-img](https://contrib.rocks).
 
-## Functionality
+## About the Project
+### Screenshots
 
-#### Server-bound messages (client->server):
-When creating a new game, the server expects the body of a request to include the requested name of the new game formatted in JSON as:
-```javascript
-    {"gameID": createGameBody}
-```
-after checking if the gameID is available, the server will reply with
-either:
-```
-    1. HTTP.StatusOK
-    2. "FAILURE: Game ID: REQUESTED_ID already exists"
-        &
-       HTTP.StatusBadRequest
-```
+(A) Home           |  (B) ID not found
+:-------------------------:|:-------------------------:
+<img src="codenames-home.jpg" alt="drawing" width="400"/>   |  <img src="codenames-notfound.jpg" alt="drawing" width="400"/> 
 
-After a successful call to create a game is made, the client is expected to make a subsequent connection request through the WebSocket API to:
-```
-    ws://FULLHOST/games?id=GAME_ID
-```
+(C) Spymaster view           |  (D) Assassin clicked
+:-------------------------:|:-------------------------:
+<img src="codenames-spymaster.jpg" alt="drawing" width="400"/>   |  <img src="codenames-player-win.jpg" alt="drawing" width="400"/> 
 
-When clients are sending card selections to the server, they are expected to be given as a space-seperated string in the form of:
-```golang
-   "cardType cardWord"
-where:
-    cardType = "red"|"blue"|"civilian"|"assassin"
-    cardWord = any single word string  
-```
+(E) All cards found            |
+:-------------------------:|
+<img src="codenames.jpg" alt="drawing" width="400"/>  |
 
-If a skip command is given, the server expects the following message:
-```golang
-    "SKIP"
-```
-#### Client-bound messages (server->client):
-If a client attempts to create a WebSocket to game that does not exist, the server will notify the client with the following message:
-```golang
-    {
-        "status": "404 No current game called GAMEID"
-    }
-```
+### Brief Overview
 
-When the server is updating a client after a card selection has been made, clients can expect information back in the form of JSON with values as follows:
-```javascript
-    {
-        "gameId": string,
-        "lastSelection": string,
-        "redScore": int,
-        "blueScore": int,
-        "turn": string,
-        "gameover": "false"|"true"
-    } 
-```
+Codenames was originally a board game made in 2015. This repository is a web-based version of that game. It is recommended that at least 4 players play. The players are split into two teams. Each team has a number of words they have to claim. The spymaster acts as an operative to give teams clues as to what their words may be. First team to claim all their words wins. There is also one wildcard (assassin), the team that selects the wildcard loses. 
+[Find out more about how to play codenames here.](https://czechgames.com/files/rules/codenames-rules-en.pdf)
 
-If a turn has been skipped, the client side WebSocket will receive a response message formatted as a single value JSON:
-```javascript
-    {
-        "turn": string,
-    }
+### Built With
 
-```
+* [Golang](https://go.dev/)
+* [TypeScript/JavaScript](https://www.typescriptlang.org/)
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [RedisDB](https://redis.io/)
 
-Upon joining a game with a WebSocket connection, the server with reply with the full game state of all relevant information structured as:
-```javascript
-    {
-        "assassin": string,
-        "blue": space-seperated words,
-        "civilian": space-seperated words,
-        "red": space-seperated words,
-        "blueScore": int,
-        "redScore": int,
-        "turn": "red"|"blue"
-        "gameover": "false"|"true"
-    }
-```
+### My Contribution
 
-Words for each type will be structured as:
-```javascript
-    "africa !agent !air alien amazon"
-```
-where each word is seperated by a single space and those words that have been previously selected are denoted by a ! at the beginning of the word
+In terms of coding, I was involved in the UX/UI, general front-end logic, and quality assurance. I designed and implemented the overall design and layout of the application, implemented the game's logic, and tested the application for bugs.
